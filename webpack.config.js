@@ -2,8 +2,8 @@ const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const autoprefixer = require('autoprefixer');
-
 module.exports = {
+  mode: 'production',
   entry: './src/index.js',
   output: {
     filename: 'main.js',
