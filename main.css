@@ -1,0 +1,330 @@
+@import url(https://fonts.googleapis.com/css?family=Acme|Niramit:400,700|Passion+One);
+/* http://meyerweb.com/eric/tools/css/reset/
+   v4.0 | 20180602
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+	display: block;
+}
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+    display: none;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+#content {
+  -webkit-perspective: 1px;
+          perspective: 1px;
+  -webkit-perspective-origin: 0 0;
+          perspective-origin: 0 0;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll; }
+
+.parallax {
+  -webkit-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: translateZ(-1px) scale(2);
+          transform: translateZ(-1px) scale(2);
+  z-index: -1; }
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+#section-1 {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: url(img/lending-1.jpg);
+  position: relative;
+  height: 100vh; }
+
+#section-2 {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+  -webkit-box-shadow: 0 -2px 20px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 -2px 20px 0px rgba(0, 0, 0, 0.3); }
+
+#section-3 {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: url(img/lending-1.jpg);
+  position: relative;
+  height: 30vh;
+  background-attachment: fixed; }
+
+.title {
+  width: 30rem;
+  z-index: 10; }
+
+#down-arrow {
+  position: absolute;
+  bottom: 2%;
+  z-index: 10;
+  width: 1.3rem;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: bounce;
+  animation-name: bounce; }
+
+@-webkit-keyframes bounce {
+  40%, 60% {
+    -webkit-transform: translateY(0); }
+  50% {
+    -webkit-transform: translateY(-10px); } }
+
+@keyframes bounce {
+  40%, 60% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px); } }
+
+.cover {
+  background: rgba(0, 0, 0, 0.4);
+  background-size: 100% 100%;
+  display: block;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 3; }
+
+h1 {
+  padding: 4rem 0;
+  font-family: 'Acme', sans-serif;
+  font-size: 2.5rem;
+  width: 100%;
+  text-align: center; }
+
+.active {
+  text-decoration: underline; }
+
+.tabs-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #a3080c;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: 'Passion One', Helvetica, cursive;
+  font-size: 1.5rem;
+  color: white; }
+
+.tab-title {
+  padding: 1rem;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer; }
+
+.tab-title:hover {
+  background-color: rgba(0, 0, 0, 0.4); }
+
+.tabs-content {
+  max-width: 64rem;
+  margin: 0 auto; }
+
+#about-tab {
+  text-align: center;
+  padding-bottom: 3rem; }
+
+.about-us {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap; }
+
+.about-us-description {
+  -ms-flex-preferred-size: 33.33333%;
+      flex-basis: 33.33333%;
+  padding: 0 1rem 1rem;
+  font-family: 'Niramit', sans-serif; }
+  .about-us-description h2 {
+    font-size: 1.7rem;
+    font-weight: bold;
+    padding: 0.5rem 0 1rem; }
+  .about-us-description p {
+    font-size: 1.2rem;
+    line-height: 1.5rem; }
+  .about-us-description:hover .about-us-icon {
+    width: 3.5rem; }
+
+.about-us-icon {
+  width: 3rem;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+
+#menu-tab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  font-family: 'Passion One', Helvetica, cursive;
+  padding-bottom: 3rem; }
+
+.product {
+  -ms-flex-preferred-size: 33.33333%;
+      flex-basis: 33.33333%;
+  padding: 0 1rem 1rem;
+  cursor: pointer; }
+  .product:hover .product-image {
+    background-size: 110%; }
+
+.product-image {
+  background-size: cover;
+  background-position: 50%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 30vh;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease; }
+
+.product-name {
+  color: white;
+  background-color: #ffae16;
+  text-transform: uppercase;
+  font-size: 2rem;
+  text-align: center;
+  padding: 1rem; }
+
+#chefburger {
+  background-image: url(https://statickfc.cdnvideo.ru/products/400/product_1014_1356046999.jpg); }
+
+#darkryeburger {
+  background-image: url(https://statickfc.cdnvideo.ru/products/400/product_844_1408373195.jpg); }
+
+#cheeseburger {
+  background-image: url(https://statickfc.cdnvideo.ru/products/400/product_712_1466080456.jpg); }
+
+#boxmasteroriginal {
+  background-image: url(https://statickfc.cdnvideo.ru/products/400/product_482_1414377064.jpg); }
+
+#twisteroriginal {
+  background-image: url(https://statickfc.cdnvideo.ru/products/400/product_459_84294897.jpg); }
+
+#hot-dog {
+  background-image: url(https://statickfc.cdnvideo.ru/products/400/product_267_762441408.jpg); }
+
+#hotwingsbucket-25 {
+  background-image: url(https://statickfc.cdnvideo.ru/products/400/product_111_1224802133.jpg); }
+
+#teriyakibites {
+  background-image: url(https://statickfc.cdnvideo.ru/products/400/product_638_403691422.jpg); }
+
+#lunchbox-5-300 {
+  background-image: url(https://statickfc.cdnvideo.ru/products/400/product_1046_710198914.png); }
+
+#find-us {
+  padding-bottom: 4rem;
+  text-align: center; }
+
+#restaurants-map {
+  width: 100%;
+  height: 60vh; }
+
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  html {
+    font-size: 12px; } }
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+  .title {
+    width: 15rem; }
+  .about-us-description, .product {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%; }
+  .product-name {
+    font-size: 1.5rem; } }
+
